@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0046)https://pathak22.github.io/zeroshot-imitation/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">
+  body {
+    font-family: "Titillium Web","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size:18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+  }
+
+  h1 {
+    font-weight:300;
+  }
+
+  .disclaimerbox {
+    background-color: #eee;
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+  }
+
+  video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.rounded {
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  a:link,a:visited
+  {
+    color: #1367a7;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+            15px 15px 0 0px #fff, /* The fourth layer */
+            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+            20px 20px 0 0px #fff, /* The fifth layer */
+            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+            25px 25px 0 0px #fff, /* The fifth layer */
+            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+    margin-left: 10px;
+    margin-right: 45px;
+  }
+
+
+  .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+
+  .vert-cent {
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+
+  #authors td {
+    padding-bottom:5px;
+    padding-top:30px;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .vflex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  p {
+    diisplay: inline-block;
+  }
+
+</style>
+
+    <!--<link rel="icon" type="image/png" href="https://pathak22.github.io/zeroshot-imitation/resources/seal_icon.png">-->
+    <title>Composing Complex Skills by Learning Transition Policies</title>
+    <meta property="og:title" content="Composing Complex Skills by Learning Transition Policies">
+    <meta property="og:description" content="Lee et al. Composing Complex Skills by Learning Transition Policies. In ICLR, 2019.">
+    <meta property="og:url" content="https://youngwoon.github.io/module/">
+    <!-- <meta property="og:image" content="https://pathak22.github.io/zeroshot-imitation/resources/teaser.png"> -->
+    <meta property="og:type" content="website">
+  </head>
+
+  <body>
+        <br>
+        <center><span style="font-size:39px;font-weight:bold;">Composing Complex Skills by Learning Transition Policies</span></center><br>
+        <table align="center" width="1000px">
+          <tbody><tr>
+            <td align="center" width="200px">
+            <center><span style="font-size:20px"><a href="https://youngwoon.github.io" target="_blank">Youngwoon Lee*</a></span></center></td>
+            <td align="center" width="200px">
+            <center><span style="font-size:20px"><a href="https://shaohua0116.github.io" target="_blank">Shao-Hua Sun*</a></span></center></td>
+            <td align="center" width="300px">
+            <center><span style="font-size:20px"><a href="" target="_blank">Sriram Somasundaram</a></span></center></td>
+            <td align="center" width="200px">
+            <center><span style="font-size:20px"><a href="https://www.edwardshu.com" target="_blank">Edward S Hu</a></span></center></td>
+            <td align="center" width="200px">
+            <center><span style="font-size:20px"><a href="https://www.clvrai.com" target="_blank">Joseph J Lim</a></span></center></td>
+          </tr><tr>
+         </tr></tbody></table>
+        <table align="center" width="600px" style="padding-top:0px;padding-bottom:20px">
+          <tbody><tr>
+            <td align="center" width="600px"><center><a style="font-size:22px;" href="https://www.clvrai.com" target="_blank">CLVR</a> <span style="font-size:22px">, University of Southern California</span></center></td>
+          </tr><tr>
+          </tr><tr>
+            <td align="center" width="600px"><center><span style="font-size:16px">* equal contribution</span></center></td>
+          </tr><tr>
+        </tr></tbody></table>
+        <table align="center" width="600px">
+          <tbody><tr>
+            <td align="center" width="650px">
+            <center><span style="font-size:22px"><a href="https://openreview.net/forum?id=rygrBhC5tQ" target="_blank">ICLR 2019</a></span></center></td>
+          </tr><tr>
+        </tr></tbody></table>
+        <table align="center" width="700px">
+          <tbody><tr>
+            <td align="center" width="200px"><center><span style="font-size:22px"><a href="https://openreview.net/pdf?id=rygrBhC5tQ">[Paper]</a></span></center></td>
+            <td align="center" width="200px"><center><span style="font-size:22px"><a href="https://openreview.net/pdf?id=rygrBhC5tQ">[Code]</a></span></center></td>
+            <!--<td align="center" width="200px"><center><span style="font-size:22px"><a href="https://openreview.net/pdf?id=rygrBhC5tQ">[Slides]</a></span></center></td>-->
+          </tr><tr>
+        </tr></tbody></table><br>
+
+        <table align="center" width="1000px">
+          <tbody><tr><td width="800px">
+            <center><a href="img/model_wide.png" style="margin-right:0px"><img src="./img/model_wide.png" width="800px" height="300px" border="0" style="border-color:black"></img></a>
+            <br></center>
+          </td></tr>
+        </tbody></table>
+
+        <br>
+
+        <div style="width:800px; margin:0 auto; text-align:justify;">
+        Humans acquire complex skills by exploiting previously learned skills and making transitions between them.
+        To empower machines with this ability, we propose a method that can learn transition policies which effectively connect primitive skills to perform sequential tasks without handcrafted rewards.
+        To efficiently train our transition policies, we introduce proximity predictors which induce rewards gauging proximity to suitable initial states for the next skill.
+        The proposed method is evaluated on a set of complex continuous control tasks in bi-pedal locomotion and robotic arm manipulation which traditional policy gradient methods struggle at.
+        We demonstrate that transition policies enable us to effectively compose complex skills with existing primitive skills.
+        The proposed induced rewards computed using the proximity predictor further improve training efficiency by providing more dense information than the sparse rewards from the environments.
+      </div>
+      <br>
+      <br>
+
+      <hr>
+
+        <center id="highlights"><h1>Highlights</h1></center>
+        <div class="flex-container" width="100%">
+            <div class="vflex-container" width="350">
+                <iframe width="330" height="250" src="https://www.youtube-nocookie.com/embed/X0Vl3Xj1ftI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p style="width:300;" align="center">This tough environment requires the agent to walk, jump and crawl its way to success.</p>
+            </div>
+            <div class="vflex-container" width="350">
+                <iframe width="330" height="250" src="https://www.youtube-nocookie.com/embed/teUTqfjd628" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p style="width:300;" align="center">Inspired by tennis, this task is composed of tossing and hitting a ball to a target.</p>
+            </div>
+            <div class="vflex-container" width="350">
+                <iframe width="330" height="250" src="https://www.youtube-nocookie.com/embed/k8zi2MNMQog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p style="width:300;" align="center">Similar to a guard patrol, the agent must walk forwards and backwards repeatedly.</p>
+            </div>
+        </div>
+      <br>
+      <hr>
+
+    <center id="trainingCurves"><h1>Training Curves</h1></center>
+    <div class="flex-center" width="100%">
+        <img src="img/result.png" width="1000px" height="400px" border="0" style="border-color:black">
+    </div>
+    <br>
+    <hr>
+    <center id="Manipulation"><h1>Manipulation</h1></center>
+    <div class="flex-center" width="100%">
+        <img src="img/manipulation.png" width="800px" height="200px" border="0" style="border-color:black">
+    </div>
+
+    <br>
+    <hr>
+    <center id="Locomotion"><h1>Locomotion</h1></center>
+    <div class="flex-center" width="100%">
+        <img src="img/locomotion.png" width="700px" height="200px" border="0" style="border-color:black">
+    </div>
+        <center id="sourceCode"><h1>Source Code and Environment</h1></center>
+        <div style="width:800px; margin:0 auto; text-align=center">
+        We have released the TensorFlow based implementation on the github page. Try our code!
+        </div>
+        <table align="center" width="900px">
+        <tbody><tr>
+          <!-- <p style="margin-top:4px;"></p> -->
+          <td width="300px" align="center">
+            <span style="font-size:28px"><a href="https://github.com/youngwoon/transition/">[GitHub]</a></span>
+          </td>
+        </tr>
+        </tbody></table>
+      <br>
+      <hr>
+      <table align="center" width="800px">
+        <tbody><tr><td width="800px"><left>
+        <center><h1>Acknowledgements</h1></center>
+        This project was supported by the center for super intelligence, Kakao Brain, and SKT.
+        The authors would like to thank Yuan-Hong Liao for helpful discussions during initial ideation.
+        </left></td></tr>
+      </tbody></table>
+    <br><br>
+
+
+</body></html>
