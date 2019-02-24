@@ -8,6 +8,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 1100px;
+    line-height: 1.4;
   }
 
   h1 {
@@ -131,6 +132,17 @@
     diisplay: inline-block;
   }
 
+  code {
+    display: block;
+    line-height: 1.5em;
+    background: #f7f7f7;
+    border-radius: 0.35em;
+    border: solid 2px #efefef;
+    padding: 0.25em 0.65em;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+  }
+
 </style>
 
     <!--<link rel="icon" type="image/png" href="https://pathak22.github.io/zeroshot-imitation/resources/seal_icon.png">-->
@@ -138,46 +150,47 @@
     <meta property="og:title" content="Composing Complex Skills by Learning Transition Policies">
     <meta property="og:description" content="Lee et al. Composing Complex Skills by Learning Transition Policies. In ICLR, 2019.">
     <meta property="og:url" content="https://youngwoon.github.io/module/">
-    <!-- <meta property="og:image" content="https://pathak22.github.io/zeroshot-imitation/resources/teaser.png"> -->
+    <meta property="og:image" content="https://youngwoon.github.io/module/img/model_wide.png">
     <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png">
   </head>
 
   <body>
         <br>
-        <center><span style="font-size:39px;font-weight:bold;">Composing Complex Skills by Learning Transition Policies</span></center><br>
-        <table align="center" width="1000px">
+        <br>
+        <center><span style="font-size:36px;font-weight:bold;">Composing Complex Skills by Learning Transition Policies</span></center><br>
+        <table align="center" width="900px">
           <tbody><tr>
-            <td align="center" width="200px">
-            <center><span style="font-size:20px"><a href="https://youngwoon.github.io" target="_blank">Youngwoon Lee*</a></span></center></td>
-            <td align="center" width="200px">
-            <center><span style="font-size:20px"><a href="https://shaohua0116.github.io" target="_blank">Shao-Hua Sun*</a></span></center></td>
-            <td align="center" width="300px">
-            <center><span style="font-size:20px"><a href="" target="_blank">Sriram Somasundaram</a></span></center></td>
-            <td align="center" width="200px">
-            <center><span style="font-size:20px"><a href="https://www.edwardshu.com" target="_blank">Edward S Hu</a></span></center></td>
-            <td align="center" width="200px">
-            <center><span style="font-size:20px"><a href="https://www.clvrai.com" target="_blank">Joseph J Lim</a></span></center></td>
+            <td align="center" width="180px">
+            <center><span style="font-size:22px"><a href="https://youngwoon.github.io" target="_blank">Youngwoon Lee*</a></span></center></td>
+            <td align="center" width="180px">
+            <center><span style="font-size:22px"><a href="https://shaohua0116.github.io" target="_blank">Shao-Hua Sun*</a></span></center></td>
+            <td align="center" width="220px">
+            <center><span style="font-size:22px"><a href="https://srirams32.github.io" target="_blank">Sriram Somasundaram</a></span></center></td>
+            <td align="center" width="150px">
+            <center><span style="font-size:22px"><a href="https://www.edwardshu.com" target="_blank">Edward S. Hu</a></span></center></td>
+            <td align="center" width="150px">
+            <center><span style="font-size:22px"><a href="https://www.clvrai.com" target="_blank">Joseph J. Lim</a></span></center></td>
           </tr><tr>
          </tr></tbody></table>
-        <table align="center" width="600px" style="padding-top:0px;padding-bottom:20px">
+        <table align="center" width="1000px" style="padding-top:0px;padding-bottom:20px">
           <tbody><tr>
-            <td align="center" width="600px"><center><a style="font-size:22px;" href="https://www.clvrai.com" target="_blank">CLVR</a> <span style="font-size:22px">, University of Southern California</span></center></td>
-          </tr><tr>
-          </tr><tr>
-            <td align="center" width="600px"><center><span style="font-size:16px">* equal contribution</span></center></td>
+                <td align="center" width="600px"><span style="font-size:20px">University of Southern California</span></center></td>
           </tr><tr>
         </tr></tbody></table>
         <table align="center" width="600px">
           <tbody><tr>
             <td align="center" width="650px">
-            <center><span style="font-size:22px"><a href="https://openreview.net/forum?id=rygrBhC5tQ" target="_blank">ICLR 2019</a></span></center></td>
+            <center><span style="font-size:22px">In ICLR 2019</span></center></td>
           </tr><tr>
         </tr></tbody></table>
-        <table align="center" width="700px">
+        <table align="center" width="600px">
           <tbody><tr>
-            <td align="center" width="200px"><center><span style="font-size:22px"><a href="https://openreview.net/pdf?id=rygrBhC5tQ">[Paper]</a></span></center></td>
-            <td align="center" width="200px"><center><span style="font-size:22px"><a href="https://openreview.net/pdf?id=rygrBhC5tQ">[Code]</a></span></center></td>
-            <!--<td align="center" width="200px"><center><span style="font-size:22px"><a href="https://openreview.net/pdf?id=rygrBhC5tQ">[Slides]</a></span></center></td>-->
+            <td align="center" width="600px">
+              <span style="font-size:20px">
+                <a href="https://openreview.net/pdf?id=rygrBhC5tQ">[Paper]</a> &nbsp;
+                <a href="https://github.com/youngwoon/transition">[Code]</a>
+              </span></td>
           </tr><tr>
         </tr></tbody></table><br>
 
@@ -189,14 +202,13 @@
         </tbody></table>
 
         <br>
+        <br>
 
         <div style="width:800px; margin:0 auto; text-align:justify;">
         Humans acquire complex skills by exploiting previously learned skills and making transitions between them.
         To empower machines with this ability, we propose a method that can learn transition policies which effectively connect primitive skills to perform sequential tasks without handcrafted rewards.
         To efficiently train our transition policies, we introduce proximity predictors which induce rewards gauging proximity to suitable initial states for the next skill.
-        The proposed method is evaluated on a set of complex continuous control tasks in bi-pedal locomotion and robotic arm manipulation which traditional policy gradient methods struggle at.
-        We demonstrate that transition policies enable us to effectively compose complex skills with existing primitive skills.
-        The proposed induced rewards computed using the proximity predictor further improve training efficiency by providing more dense information than the sparse rewards from the environments.
+        The proposed method is evaluated on a set of complex continuous control tasks in bipedal locomotion and robotic arm manipulation which traditional policy gradient methods struggle at.
       </div>
       <br>
       <br>
@@ -223,43 +235,59 @@
 
     <center id="trainingCurves"><h1>Training Curves</h1></center>
     <div class="flex-center" width="100%">
-        <img src="img/result.png" width="1000px" height="400px" border="0" style="border-color:black">
+        <img src="img/result.png" width="1100px" height="400px" border="0" style="border-color:black">
     </div>
     <br>
     <hr>
     <center id="Manipulation"><h1>Manipulation</h1></center>
     <div class="flex-center" width="100%">
-        <img src="img/manipulation.png" width="800px" height="200px" border="0" style="border-color:black">
+        <img src="img/manipulation.png" width="600px" height="150px" border="0" style="border-color:black">
     </div>
 
     <br>
     <hr>
     <center id="Locomotion"><h1>Locomotion</h1></center>
     <div class="flex-center" width="100%">
-        <img src="img/locomotion.png" width="700px" height="200px" border="0" style="border-color:black">
+        <img src="img/locomotion.png" width="500px" height="150px" border="0" style="border-color:black">
     </div>
-        <center id="sourceCode"><h1>Source Code and Environment</h1></center>
-        <div style="width:800px; margin:0 auto; text-align=center">
-        We have released the TensorFlow based implementation on the github page. Try our code!
-        </div>
-        <table align="center" width="900px">
-        <tbody><tr>
-          <!-- <p style="margin-top:4px;"></p> -->
-          <td width="300px" align="center">
-            <span style="font-size:28px"><a href="https://github.com/youngwoon/transition/">[GitHub]</a></span>
-          </td>
-        </tr>
-        </tbody></table>
-      <br>
-      <hr>
-      <table align="center" width="800px">
-        <tbody><tr><td width="800px"><left>
-        <center><h1>Acknowledgements</h1></center>
-        This project was supported by the center for super intelligence, Kakao Brain, and SKT.
-        The authors would like to thank Yuan-Hong Liao for helpful discussions during initial ideation.
-        </left></td></tr>
-      </tbody></table>
-    <br><br>
 
+    <br>
+    <hr>
+    <center><h1>Citation</h1></center>
+    <table align="center">
+      <tbody><tr><td width="800px">
+        <pre xml:space="preserve" style="display:block;width:800px">
+<code>@inproceedings{lee2019composing,
+  title = {Composing Complex Skills by Learning Transition Policies},
+  author = {Lee, Youngwoon and Sun, Shao-Hua and Somasundaram, Sriram and Hu, Edward S and Lim, Joseph J},
+  booktitle = {Proceedings of International Conference on Learning Representations},
+  year = {2019},
+  url={https://openreview.net/forum?id=rygrBhC5tQ},
+}</code>
+        </pre>
+      </td></tr>
+    </tbody></table>
 
+    <br>
+    <hr>
+    <center><h1>Acknowledgements</h1></center>
+    <table align="center" width="800px">
+      <tbody><tr><td width="800px"><left>
+      This project was supported by the center for super intelligence, Kakao Brain, and SKT.
+      The authors would like to thank Yuan-Hong Liao for helpful discussions during initial ideation.
+      </left></td></tr>
+    </tbody></table>
+
+    <br>
+    <hr>
+    <br>
+    <table align="right" width="800px">
+      <tbody><tr><td width="800px" align="right">
+        <small>
+        Website design: <a href="https://pathak22.github.io/zeroshot-imitation/" target="_blank">BAIR paper websites</a>
+        </small>
+      </td></tr>
+      </tbody>
+    </table>
+    <br>
 </body></html>
